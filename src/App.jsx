@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom'
 import Home from '../src/pages/Home'
 import Books from '../src/pages/Books'
 import BookDetail from '../src/pages/BookDetail'
+import Login from './pages/Login'
 
 function App() {
   
@@ -16,7 +17,7 @@ function App() {
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/books' element={<Books/>}/>
-      {/* <Route path='/login' element={<Login/>}/> */}
+       <Route path='/login' element={<Login/>}/>
       <Route path='/books/:id' element={<BookDetail/>}/>
      </Routes>
     </>

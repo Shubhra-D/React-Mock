@@ -1,22 +1,23 @@
 import React, { useContext, useState } from 'react'
 import AuthContext from '../context/AuthContext'
+import axios from 'axios'
 
 const Login = () => {
 const [username,setUsername] = useState("")
 const [password,setPassword] = useState("")
-    const {login} = useContext(AuthContext)
+   // const {login} = useContext(AuthContext)
 
 const handleSubmit = (e)=>{
      e.preventDefault()
      axios({
-        url:``,
+        url:`https://peppermint-carnelian-captain.glitch.me/login`,
         method:"POST",
         data:{
-            username:username,
-            password:password
+            username:"",
+            password:""
         }
      }).then((res)=>{
-           login(res.data.token)
+          //  login(res.data.token)
            console.log(res.data.token)
      }).catch((err)=>{
         console.error(err)
